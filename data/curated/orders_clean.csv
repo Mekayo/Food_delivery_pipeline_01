@@ -1,0 +1,102 @@
+order_id,name,amenity,cuisine,place,lat,lon
+1431156028,Citco Cafe,restaurant,unknown,unknown,30.750353,76.7875199
+1819752762,Student Centre,fast_food,regional,unknown,30.7622651,76.7698243
+2434546249,Domino's,fast_food,pizza,Chandigarh,30.7405201,76.7972311
+2434552646,KFC,fast_food,chicken,Chandigarh,30.7399615,76.7920424
+2623400919,Pizza Hut,restaurant,pizza,Chandigarh,30.7547075,76.7698865
+2623402079,Gopal's,restaurant,unknown,unknown,30.7541517,76.7703936
+2623402294,La Pinoz,cafe,unknown,unknown,30.7543603,76.7702174
+2623403244,Talwar,restaurant,unknown,unknown,30.7542089,76.7703377
+2623403423,Domino's,fast_food,pizza,Chandigarh,30.751947,76.7721555
+3185953504,1113;5 Yesss,fast_food,unknown,unknown,30.757182,76.774812
+3476116193,Roll corner,restaurant,fast_food,unknown,30.753768,76.7703325
+3595994933,Backpackers Cafe,restaurant,international,unknown,30.7048722,76.8008267
+4214695189,Old Pal Dhaba,restaurant,unknown,unknown,30.7195068,76.8016043
+4214699191,Virgin Courtyard,restaurant,unknown,unknown,30.7347573,76.7974349
+4214699590,"Aja Fresh, Grilled & Healthy",restaurant,unknown,unknown,30.760893,76.782019
+4239105393,Circo Cafe,fast_food,unknown,unknown,30.7523282,76.8083397
+4239347391,Backpackers,restaurant,breakfast;american;indian,unknown,30.7476494,76.7931394
+4355006792,Noor Restaurant,restaurant,unknown,unknown,30.7396193,76.7749964
+4366033789,Shree Rathnan,restaurant,unknown,unknown,30.7377695,76.7833348
+4378872592,Chilli Chaats,fast_food,unknown,unknown,30.7221991,76.7603933
+4414951192,Barista,cafe,coffee_shop,unknown,30.759609,76.7827465
+4414961892,Coffee Day,cafe,unknown,unknown,30.7596395,76.7827205
+4430448289,Ghazal,restaurant,unknown,unknown,30.7391273,76.784807
+4433593589,Domino's,fast_food,pizza,Chandigarh,30.7247433,76.7688338
+4550109990,Dilli ki gali - Paratha,restaurant,unknown,unknown,30.7382047,76.7748729
+4600156291,Nukkar dabba,fast_food,unknown,unknown,30.7273765,76.769631
+4656651496,Gurbax Dhaba,restaurant,indian,unknown,30.7316939,76.7648378
+4699349594,Toshib's buffet 34,restaurant,unknown,unknown,30.7177971,76.7663291
+4701515789,Burger Hub,fast_food,unknown,unknown,30.7096432,76.7740291
+4701519589,Bholey da dhaba,restaurant,unknown,unknown,30.7095379,76.7730451
+4736028426,Subway,fast_food,sandwich,Chandigarh,30.7108415,76.7727489
+4736051021,<3 Desi,restaurant,unknown,unknown,30.71069,76.7725672
+5246883722,Jullundur hotel,restaurant,unknown,unknown,30.7342063,76.7784151
+5248212121,Sindhi's sweets and restaurant,restaurant,unknown,unknown,30.7435256,76.7825997
+5502592021,The Crown Patisserie,cafe,unknown,unknown,30.7401374,76.7806591
+5761966759,AC Tavern,fast_food,unknown,unknown,30.6939724,76.7711242
+5761966878,PegTalks,restaurant,unknown,unknown,30.6940495,76.7710514
+5844089385,Tikka Freaks,restaurant,unknown,unknown,30.7408182,76.7974509
+5848597585,Nomad by Backpackers,restaurant,unknown,unknown,30.7329645,76.8032025
+5849007685,The Hedgehog Café,restaurant,unknown,unknown,30.7361443,76.8007276
+5849007686,Sultan,restaurant,unknown,unknown,30.733848,76.7974122
+5850303488,Marmeid Restaurant,restaurant,unknown,unknown,30.745318,76.8102542
+5863235598,Sagar Ratna,restaurant,unknown,unknown,30.7377054,76.7832317
+6580200185,Aja - fresh grilled healthy,restaurant,unknown,unknown,30.74284,76.7900042
+6612932360,Sagar Ratna,restaurant,south_indian,unknown,30.722698,76.761841
+6612985321,Chaayos,cafe,tea,unknown,30.7301713,76.7735395
+6798001185,Ovenfresh,restaurant,italian;italian_pizza;cake;coffee_shop;pasta;burger;pizza;pancake,unknown,30.7217436,76.760465
+6964126390,The Chef,restaurant,unknown,unknown,30.7353561,76.7791177
+7085922791,McDonald's,fast_food,burger,Chandigarh,30.7281251,76.8453689
+7087990600,Burger King,fast_food,burger,Chandigarh,30.7393088,76.7926929
+7095083174,McDonald's,fast_food,burger,Chandigarh,30.7213458,76.759668
+7095083177,Burger King,fast_food,burger,Chandigarh,30.7052553,76.8009923
+7095088866,Burger King,fast_food,burger,chandigarh,30.721543,76.7586536
+7095096821,McDonald's,fast_food,burger,Chandigarh,30.7301494,76.7735669
+7095177587,McDonald's,fast_food,burger,Chandigarh,30.7057251,76.8014318
+7095182996,Burger King,fast_food,burger,Chandigarh,30.7423784,76.7997248
+7095201969,McDonald's,fast_food,burger,Chandigarh,30.7131574,76.8442625
+7095372621,KFC,fast_food,chicken,Chandigarh,30.7227613,76.7588385
+7095376875,Subway,fast_food,sandwich,Chandigarh,30.7402819,76.798415
+7095405513,Subway,fast_food,sandwich,Chandigarh,30.7461771,76.7432597
+7095408970,Subway,fast_food,sandwich,Chandigarh,30.7594768,76.7826951
+7095413431,Subway,fast_food,sandwich,Chandigarh,30.7200656,76.7573416
+7095418174,KFC,fast_food,chicken,Chandigarh,30.7232248,76.7676313
+7095426394,KFC,fast_food,chicken,Chandigarh,30.7055714,76.8011262
+7095439072,Domino's,fast_food,pizza,Chandigarh,30.720014,76.75727
+7095439087,Subway,fast_food,sandwich,Chandigarh,30.7301909,76.7735316
+7095444648,Subway,fast_food,sandwich,Chandigarh,30.7298333,76.7910327
+7095461731,Subway,fast_food,sandwich,Chandigarh,30.7007565,76.7646984
+7095489274,Subway,fast_food,sandwich,Chandigarh,30.7056801,76.8006549
+7095651374,Pizza Hut,restaurant,pizza,Chandigarh,30.7432232,76.7441501
+7095658226,Domino's,fast_food,pizza,Chandigarh,30.7054014,76.8016531
+7095680042,Pizza Hut,restaurant,pizza,Chandigarh,30.7054706,76.8005749
+7095690214,Pizza Hut,restaurant,pizza,Chandigarh,30.7246218,76.76475
+7095722358,Domino's,fast_food,pizza,IT Park Chandigarh,30.7289312,76.8455691
+7095731424,Domino's,fast_food,pizza,Chandigarh,30.6947031,76.7702528
+7095752863,Domino's,fast_food,pizza,Chandigarh,30.7458478,76.7434986
+7130950452,Boathouse,restaurant,international,unknown,30.704614,76.8020645
+7130950453,Sagar Ranta,restaurant,regional,unknown,30.7059608,76.8008199
+7271721544,Indian Coffee House,restaurant,coffee_shop;indian,unknown,30.7402243,76.780603
+7271726386,7ven 11ven,restaurant,unknown,unknown,30.7435825,76.7873286
+8974472014,Backhouse Restaurant,restaurant,unknown,unknown,30.7554281,76.7671786
+9079637717,Brother's Amritsari Kulcha Hub,fast_food,punjabi,Chandigarh,30.7431827,76.7895894
+9662187731,Vinnie's Bakery,cafe,bakery,unknown,30.7186543,76.7659887
+9983283503,D-JAGG's choice,restaurant,italian;chinese;dosa,Chandigarh,30.7235381,76.7688377
+10008320118,Backpackers,restaurant,unknown,unknown,30.7400461,76.7925204
+10823111730,The Burger Basket,fast_food,burger;pizza,unknown,30.7340943,76.8307092
+11364089947,Domino's,fast_food,pizza,unknown,30.7307624,76.7730813
+11691617173,Chai sutta bar,fast_food,unknown,unknown,30.7183894,76.7661234
+11691617174,bombay express,fast_food,unknown,unknown,30.7184868,76.7660349
+11897107938,Woods cafe,cafe,unknown,unknown,30.7511308,76.8123752
+11897131996,Pal Dhaba (old),restaurant,unknown,unknown,30.719101,76.8015497
+11897133641,Dialogue cafe,cafe,unknown,unknown,30.7258327,76.7668732
+12511928201,Back To Source,restaurant,indian,unknown,30.74305,76.7864234
+12597165366,Grapewine,cafe,unknown,Chandigarh,30.7302106,76.7735059
+12597169455,"Keventers - Aroma Hotel, Chandigarh",fast_food,juice,Chandigarh,30.7303115,76.7734213
+12597548369,Chick blast,restaurant,unknown,Chandigarh,30.7096343,76.773634
+12632106041,Beige cafe & bakery,cafe,unknown,Chandigarh,30.7325473,76.7994039
+12923841257,Qisa,restaurant,unknown,unknown,30.7434157,76.78704
+12923870879,Acme India,fast_food,unknown,unknown,30.7625091,76.7696504
+12923870891,Guru,fast_food,unknown,unknown,30.7623651,76.7697541
+12923887609,Fresh Bite,fast_food,unknown,unknown,30.762423,76.7697158

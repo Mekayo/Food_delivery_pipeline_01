@@ -1,0 +1,1652 @@
+{
+  "metadata": {
+    "source": "overpass_turbo",
+    "endpoint": "https://overpass-api.de/api/interpreter?data=[out:json][timeout:25];area[\"name\"=\"Chandigarh\"][\"boundary\"=\"administrative\"]->.searchArea;(node[\"amenity\"=\"restaurant\"](area.searchArea);node[\"amenity\"=\"fast_food\"](area.searchArea);node[\"amenity\"=\"cafe\"](area.searchArea););out tags center;",
+    "ingestion_timestamp": "2025-12-16T19:00:36.283746"
+  },
+  "data": {
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.8 e802775f",
+    "osm3s": {
+      "timestamp_osm_base": "2025-12-16T18:59:13Z",
+      "timestamp_areas_base": "2025-12-16T15:11:45Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+      {
+        "type": "node",
+        "id": 1431156028,
+        "lat": 30.750353,
+        "lon": 76.7875199,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Citco Cafe"
+        }
+      },
+      {
+        "type": "node",
+        "id": 1819752762,
+        "lat": 30.7622651,
+        "lon": 76.7698243,
+        "tags": {
+          "amenity": "fast_food",
+          "cuisine": "regional",
+          "name": "Student Centre"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2434546249,
+        "lat": 30.7405201,
+        "lon": 76.7972311,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 8",
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:ks": "ڈومینوز",
+          "brand:pa": "ਡੋਮੀਨੋਜ਼",
+          "brand:ur": "ڈومینوز",
+          "brand:wikidata": "Q839466",
+          "brand:wikipedia": "en:Domino's Pizza",
+          "cuisine": "pizza",
+          "name": "Domino's",
+          "name:ks": "ڈومینوز",
+          "name:pa": "ਡੋਮੀਨੋਜ਼",
+          "name:ur": "ڈومینوز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2434552646,
+        "lat": 30.7399615,
+        "lon": 76.7920424,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Sector 8",
+          "addr:street": "Madhya Marg",
+          "alt_name": "Kentucky Fried Chicken",
+          "alt_name:en": "Kentucky Fried Chicken",
+          "alt_name:hi": "केंटुकी फ्राइड चिकन",
+          "alt_name:pa": "ਕੈਂਟੁਕੀ ਫ੍ਰਾਈਡ ਚਿਕਨ",
+          "alt_name:pnb": "کینٹکی فرائیڈ چکن",
+          "alt_name:ur": "کینٹکی فرائیڈ چکن",
+          "amenity": "fast_food",
+          "brand": "KFC",
+          "brand:en": "KFC",
+          "brand:hi": "केएफसी",
+          "brand:pa": "ਕੇਐਫਸੀ",
+          "brand:pnb": "کے ایف سی",
+          "brand:ur": "کے ایف سی",
+          "brand:wikidata": "Q524757",
+          "brand:wikipedia": "en:KFC",
+          "brand:wikipedia:pa": "ਕੇਐਫਸੀ",
+          "brand:wikipedia:ur": "کینٹکی فرائیڈ چکن",
+          "cuisine": "chicken",
+          "fast_food": "restaurant",
+          "name": "KFC",
+          "name:en": "KFC",
+          "name:hi": "केएफसी",
+          "name:pa": "ਕੇਐਫਸੀ",
+          "name:pnb": "کے ایف سی",
+          "name:ur": "کے ایف سی",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2623400919,
+        "lat": 30.7547075,
+        "lon": 76.7698865,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Sector-15D",
+          "addr:street": "Vidya Marg",
+          "amenity": "restaurant",
+          "brand": "Pizza Hut",
+          "brand:wikidata": "Q191615",
+          "brand:wikipedia": "en:Pizza Hut",
+          "cuisine": "pizza",
+          "name": "Pizza Hut"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2623402079,
+        "lat": 30.7541517,
+        "lon": 76.7703936,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Gopal's"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2623402294,
+        "lat": 30.7543603,
+        "lon": 76.7702174,
+        "tags": {
+          "amenity": "cafe",
+          "name": "La Pinoz"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2623403244,
+        "lat": 30.7542089,
+        "lon": 76.7703377,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Talwar"
+        }
+      },
+      {
+        "type": "node",
+        "id": 2623403423,
+        "lat": 30.751947,
+        "lon": 76.7721555,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 15",
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:ks": "ڈومینوز",
+          "brand:pa": "ਡੋਮੀਨੋਜ਼",
+          "brand:ur": "ڈومینوز",
+          "brand:wikidata": "Q839466",
+          "brand:wikipedia": "en:Domino's Pizza",
+          "cuisine": "pizza",
+          "name": "Domino's",
+          "name:ks": "ڈومینوز",
+          "name:pa": "ਡੋਮੀਨੋਜ਼",
+          "name:ur": "ڈومینوز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 3185953504,
+        "lat": 30.757182,
+        "lon": 76.774812,
+        "tags": {
+          "amenity": "fast_food",
+          "drive_in": "no",
+          "drive_through": "no",
+          "internet_access:fee": "no",
+          "name": "1113;5 Yesss",
+          "wheelchair": "no"
+        }
+      },
+      {
+        "type": "node",
+        "id": 3476116193,
+        "lat": 30.753768,
+        "lon": 76.7703325,
+        "tags": {
+          "amenity": "restaurant",
+          "cuisine": "fast_food",
+          "name": "Roll corner",
+          "takeaway": "only"
+        }
+      },
+      {
+        "type": "node",
+        "id": 3595994933,
+        "lat": 30.7048722,
+        "lon": 76.8008267,
+        "tags": {
+          "amenity": "restaurant",
+          "cuisine": "international",
+          "name": "Backpackers Cafe"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4214695189,
+        "lat": 30.7195068,
+        "lon": 76.8016043,
+        "tags": {
+          "amenity": "restaurant",
+          "check_date": "2023-04-19",
+          "name": "Old Pal Dhaba",
+          "opening_hours": "Mo-Su 07:00-22:30",
+          "phone": "0 1725078614"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4214699191,
+        "lat": 30.7347573,
+        "lon": 76.7974349,
+        "tags": {
+          "addr:postcode": "160007",
+          "addr:street": "Madhya Marg",
+          "amenity": "restaurant",
+          "name": "Virgin Courtyard",
+          "opening_hours": "Mo-Su 11:30-23:30",
+          "phone": "08699000999"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4214699590,
+        "lat": 30.760893,
+        "lon": 76.782019,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Aja Fresh, Grilled & Healthy",
+          "opening_hours": "Mo-Su 11:00-23:00"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4239105393,
+        "lat": 30.7523282,
+        "lon": 76.8083397,
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Circo Cafe",
+          "name:en": "CITCO"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4239347391,
+        "lat": 30.7476494,
+        "lon": 76.7931394,
+        "tags": {
+          "amenity": "restaurant",
+          "cuisine": "breakfast;american;indian",
+          "name": "Backpackers"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4355006792,
+        "lat": 30.7396193,
+        "lon": 76.7749964,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Noor Restaurant"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4366033789,
+        "lat": 30.7377695,
+        "lon": 76.7833348,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Shree Rathnan"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4378872592,
+        "lat": 30.7221991,
+        "lon": 76.7603933,
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Chilli Chaats",
+          "name:en": "Chilli Chaats"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4414951192,
+        "lat": 30.759609,
+        "lon": 76.7827465,
+        "tags": {
+          "amenity": "cafe",
+          "brand": "Barista",
+          "brand:wikidata": "Q644735",
+          "cuisine": "coffee_shop",
+          "name": "Barista",
+          "name:en": "Barista",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4414961892,
+        "lat": 30.7596395,
+        "lon": 76.7827205,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Coffee Day",
+          "name:en": "Coffee Day"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4430448289,
+        "lat": 30.7391273,
+        "lon": 76.784807,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Ghazal",
+          "name:en": "Ghazal"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4433593589,
+        "lat": 30.7247433,
+        "lon": 76.7688338,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 34",
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:ks": "ڈومینوز",
+          "brand:pa": "ਡੋਮੀਨੋਜ਼",
+          "brand:ur": "ڈومینوز",
+          "brand:wikidata": "Q839466",
+          "brand:wikipedia": "en:Domino's Pizza",
+          "cuisine": "pizza",
+          "name": "Domino's",
+          "name:ks": "ڈومینوز",
+          "name:pa": "ਡੋਮੀਨੋਜ਼",
+          "name:ur": "ڈومینوز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4550109990,
+        "lat": 30.7382047,
+        "lon": 76.7748729,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Dilli ki gali - Paratha",
+          "name:en": "Dilli ki gali - Paratha"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4600156291,
+        "lat": 30.7273765,
+        "lon": 76.769631,
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Nukkar dabba",
+          "name:hi": "Nukkar dabba"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4656651496,
+        "lat": 30.7316939,
+        "lon": 76.7648378,
+        "tags": {
+          "addr:housenumber": "3025-D",
+          "addr:postcode": "160022",
+          "addr:street": "Dakshin Marg",
+          "amenity": "restaurant",
+          "cuisine": "indian",
+          "email": "gurbaxdhaba79@gmail.com",
+          "name": "Gurbax Dhaba",
+          "name:en": "Gurbax Dhaba",
+          "name:hi": "गुर्बाक्ष ढाबा",
+          "opening_hours": "Mo-Su 08:00-23:00",
+          "operator": "Gurbax Singh",
+          "phone": "+919888869714"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4699349594,
+        "lat": 30.7177971,
+        "lon": 76.7663291,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Toshib's buffet 34",
+          "name:en": "Toshib's buffet 34"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4701515789,
+        "lat": 30.7096432,
+        "lon": 76.7740291,
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Burger Hub",
+          "name:en": "Burger Hub"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4701519589,
+        "lat": 30.7095379,
+        "lon": 76.7730451,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Bholey da dhaba",
+          "name:en": "Bholey da dhaba"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4736028426,
+        "lat": 30.7108415,
+        "lon": 76.7727489,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 32 D",
+          "amenity": "fast_food",
+          "brand": "Subway",
+          "brand:pa": "ਸਬਵੇਅ",
+          "brand:ur": "سب وے",
+          "brand:wikidata": "Q244457",
+          "brand:wikipedia": "en:Subway (restaurant)",
+          "cuisine": "sandwich",
+          "name": "Subway",
+          "name:pa": "ਸਬਵੇਅ",
+          "name:ur": "سب وے",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 4736051021,
+        "lat": 30.71069,
+        "lon": 76.7725672,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "<3 Desi",
+          "name:en": "<3 Desi"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5246883722,
+        "lat": 30.7342063,
+        "lon": 76.7784151,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Jullundur hotel"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5248212121,
+        "lat": 30.7435256,
+        "lon": 76.7825997,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Sindhi's sweets and restaurant"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5502592021,
+        "lat": 30.7401374,
+        "lon": 76.7806591,
+        "tags": {
+          "amenity": "cafe",
+          "name": "The Crown Patisserie"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5761966759,
+        "lat": 30.6939724,
+        "lon": 76.7711242,
+        "tags": {
+          "amenity": "fast_food",
+          "diet:vegetarian": "yes",
+          "name": "AC Tavern"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5761966878,
+        "lat": 30.6940495,
+        "lon": 76.7710514,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "PegTalks"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5844089385,
+        "lat": 30.7408182,
+        "lon": 76.7974509,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Tikka Freaks"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5848597585,
+        "lat": 30.7329645,
+        "lon": 76.8032025,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Nomad by Backpackers"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5849007685,
+        "lat": 30.7361443,
+        "lon": 76.8007276,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "The Hedgehog Café"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5849007686,
+        "lat": 30.733848,
+        "lon": 76.7974122,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Sultan"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5850303488,
+        "lat": 30.745318,
+        "lon": 76.8102542,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Marmeid Restaurant"
+        }
+      },
+      {
+        "type": "node",
+        "id": 5863235598,
+        "lat": 30.7377054,
+        "lon": 76.7832317,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Sagar Ratna"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6580200185,
+        "lat": 30.74284,
+        "lon": 76.7900042,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Aja - fresh grilled healthy"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6612932360,
+        "lat": 30.722698,
+        "lon": 76.761841,
+        "tags": {
+          "amenity": "restaurant",
+          "cuisine": "south_indian",
+          "name": "Sagar Ratna"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6612985321,
+        "lat": 30.7301713,
+        "lon": 76.7735395,
+        "tags": {
+          "amenity": "cafe",
+          "brand": "Chaayos",
+          "brand:wikidata": "Q117235235",
+          "cuisine": "tea",
+          "name": "Chaayos",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6798001185,
+        "lat": 30.7217436,
+        "lon": 76.760465,
+        "tags": {
+          "amenity": "restaurant",
+          "cuisine": "italian;italian_pizza;cake;coffee_shop;pasta;burger;pizza;pancake",
+          "name": "Ovenfresh"
+        }
+      },
+      {
+        "type": "node",
+        "id": 6964126390,
+        "lat": 30.7353561,
+        "lon": 76.7791177,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "The Chef"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7085922791,
+        "lat": 30.7281251,
+        "lon": 76.8453689,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "DLF Mall IT Park Rd",
+          "amenity": "fast_food",
+          "brand": "McDonald's",
+          "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "brand:ur": "مکڈونلڈز",
+          "brand:wikidata": "Q38076",
+          "brand:wikipedia": "en:McDonald's",
+          "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "brand:wikipedia:ur": "مکڈونلڈز",
+          "cuisine": "burger",
+          "name": "McDonald's",
+          "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "name:ur": "مکڈونلڈز"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7087990600,
+        "lat": 30.7393088,
+        "lon": 76.7926929,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Sector 8A",
+          "addr:street": "Madhya Marg",
+          "amenity": "fast_food",
+          "brand": "Burger King",
+          "brand:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "brand:ur": "برگر کنگ",
+          "brand:wikidata": "Q177054",
+          "brand:wikipedia": "en:Burger King",
+          "brand:wikipedia:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "brand:wikipedia:ur": "برگر کنگ",
+          "cuisine": "burger",
+          "name": "Burger King",
+          "name:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "name:ru": "Бургер Кинг",
+          "name:ur": "برگر کنگ",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095083174,
+        "lat": 30.7213458,
+        "lon": 76.759668,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 35C",
+          "amenity": "fast_food",
+          "brand": "McDonald's",
+          "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "brand:ur": "مکڈونلڈز",
+          "brand:wikidata": "Q38076",
+          "brand:wikipedia": "en:McDonald's",
+          "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "brand:wikipedia:ur": "مکڈونلڈز",
+          "cuisine": "burger",
+          "name": "McDonald's",
+          "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "name:ur": "مکڈونلڈز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095083177,
+        "lat": 30.7052553,
+        "lon": 76.8009923,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Elante Mall",
+          "amenity": "fast_food",
+          "brand": "Burger King",
+          "brand:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "brand:ur": "برگر کنگ",
+          "brand:wikidata": "Q177054",
+          "brand:wikipedia": "en:Burger King",
+          "brand:wikipedia:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "brand:wikipedia:ur": "برگر کنگ",
+          "cuisine": "burger",
+          "name": "Burger King",
+          "name:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "name:ru": "Бургер Кинг",
+          "name:ur": "برگر کنگ",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095088866,
+        "lat": 30.721543,
+        "lon": 76.7586536,
+        "tags": {
+          "addr:city": "chandigarh",
+          "addr:housenumber": "Sector-35",
+          "addr:street": "Himalaya Marg",
+          "amenity": "fast_food",
+          "brand": "Burger King",
+          "brand:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "brand:ur": "برگر کنگ",
+          "brand:wikidata": "Q177054",
+          "brand:wikipedia": "en:Burger King",
+          "brand:wikipedia:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "brand:wikipedia:ur": "برگر کنگ",
+          "cuisine": "burger",
+          "name": "Burger King",
+          "name:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "name:ru": "Бургер Кинг",
+          "name:ur": "برگر کنگ",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095096821,
+        "lat": 30.7301494,
+        "lon": 76.7735669,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 22C",
+          "amenity": "fast_food",
+          "brand": "McDonald's",
+          "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "brand:ur": "مکڈونلڈز",
+          "brand:wikidata": "Q38076",
+          "brand:wikipedia": "en:McDonald's",
+          "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "brand:wikipedia:ur": "مکڈونلڈز",
+          "check_date": "2023-11-20",
+          "cuisine": "burger",
+          "name": "McDonald's",
+          "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "name:ur": "مکڈونلڈز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095177587,
+        "lat": 30.7057251,
+        "lon": 76.8014318,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Elante Mall",
+          "amenity": "fast_food",
+          "brand": "McDonald's",
+          "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "brand:ur": "مکڈونلڈز",
+          "brand:wikidata": "Q38076",
+          "brand:wikipedia": "en:McDonald's",
+          "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "brand:wikipedia:ur": "مکڈونلڈز",
+          "cuisine": "burger",
+          "name": "McDonald's",
+          "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "name:ur": "مکڈونلڈز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095182996,
+        "lat": 30.7423784,
+        "lon": 76.7997248,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "sector-8c",
+          "amenity": "fast_food",
+          "brand": "Burger King",
+          "brand:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "brand:ur": "برگر کنگ",
+          "brand:wikidata": "Q177054",
+          "brand:wikipedia": "en:Burger King",
+          "brand:wikipedia:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "brand:wikipedia:ur": "برگر کنگ",
+          "cuisine": "burger",
+          "name": "Burger King",
+          "name:pa": "ਬਰਗਰ ਕਿੰਗ",
+          "name:ru": "Бургер Кинг",
+          "name:ur": "برگر کنگ",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095201969,
+        "lat": 30.7131574,
+        "lon": 76.8442625,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Fun Republic",
+          "addr:street": "Manimajra",
+          "amenity": "fast_food",
+          "brand": "McDonald's",
+          "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "brand:ur": "مکڈونلڈز",
+          "brand:wikidata": "Q38076",
+          "brand:wikipedia": "en:McDonald's",
+          "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "brand:wikipedia:ur": "مکڈونلڈز",
+          "cuisine": "burger",
+          "drive_through": "no",
+          "name": "McDonald's",
+          "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+          "name:ur": "مکڈونلڈز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095372621,
+        "lat": 30.7227613,
+        "lon": 76.7588385,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Sector-35",
+          "alt_name": "Kentucky Fried Chicken",
+          "alt_name:en": "Kentucky Fried Chicken",
+          "alt_name:hi": "केंटुकी फ्राइड चिकन",
+          "alt_name:pa": "ਕੈਂਟੁਕੀ ਫ੍ਰਾਈਡ ਚਿਕਨ",
+          "alt_name:pnb": "کینٹکی فرائیڈ چکن",
+          "alt_name:ur": "کینٹکی فرائیڈ چکن",
+          "amenity": "fast_food",
+          "brand": "KFC",
+          "brand:en": "KFC",
+          "brand:hi": "केएफसी",
+          "brand:pa": "ਕੇਐਫਸੀ",
+          "brand:pnb": "کے ایف سی",
+          "brand:ur": "کے ایف سی",
+          "brand:wikidata": "Q524757",
+          "brand:wikipedia": "en:KFC",
+          "brand:wikipedia:pa": "ਕੇਐਫਸੀ",
+          "brand:wikipedia:ur": "کینٹکی فرائیڈ چکن",
+          "cuisine": "chicken",
+          "name": "KFC",
+          "name:en": "KFC",
+          "name:hi": "केएफसी",
+          "name:pa": "ਕੇਐਫਸੀ",
+          "name:pnb": "کے ایف سی",
+          "name:ur": "کے ایف سی",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095376875,
+        "lat": 30.7402819,
+        "lon": 76.798415,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 8",
+          "amenity": "fast_food",
+          "brand": "Subway",
+          "brand:pa": "ਸਬਵੇਅ",
+          "brand:ur": "سب وے",
+          "brand:wikidata": "Q244457",
+          "brand:wikipedia": "en:Subway (restaurant)",
+          "cuisine": "sandwich",
+          "name": "Subway",
+          "name:pa": "ਸਬਵੇਅ",
+          "name:ur": "سب وے",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095405513,
+        "lat": 30.7461771,
+        "lon": 76.7432597,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 38 D",
+          "amenity": "fast_food",
+          "brand": "Subway",
+          "brand:pa": "ਸਬਵੇਅ",
+          "brand:ur": "سب وے",
+          "brand:wikidata": "Q244457",
+          "brand:wikipedia": "en:Subway (restaurant)",
+          "cuisine": "sandwich",
+          "indoor_seating": "yes",
+          "name": "Subway",
+          "name:pa": "ਸਬਵੇਅ",
+          "name:ur": "سب وے",
+          "outdoor_seating": "no",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095408970,
+        "lat": 30.7594768,
+        "lon": 76.7826951,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 11 D",
+          "amenity": "fast_food",
+          "brand": "Subway",
+          "brand:pa": "ਸਬਵੇਅ",
+          "brand:ur": "سب وے",
+          "brand:wikidata": "Q244457",
+          "brand:wikipedia": "en:Subway (restaurant)",
+          "cuisine": "sandwich",
+          "name": "Subway",
+          "name:pa": "ਸਬਵੇਅ",
+          "name:ur": "سب وے",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095413431,
+        "lat": 30.7200656,
+        "lon": 76.7573416,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 35 C",
+          "amenity": "fast_food",
+          "brand": "Subway",
+          "brand:pa": "ਸਬਵੇਅ",
+          "brand:ur": "سب وے",
+          "brand:wikidata": "Q244457",
+          "brand:wikipedia": "en:Subway (restaurant)",
+          "cuisine": "sandwich",
+          "name": "Subway",
+          "name:pa": "ਸਬਵੇਅ",
+          "name:ur": "سب وے",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095418174,
+        "lat": 30.7232248,
+        "lon": 76.7676313,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Sector-34A",
+          "addr:street": "Himalaya Marg",
+          "alt_name": "Kentucky Fried Chicken",
+          "alt_name:en": "Kentucky Fried Chicken",
+          "alt_name:hi": "केंटुकी फ्राइड चिकन",
+          "alt_name:pa": "ਕੈਂਟੁਕੀ ਫ੍ਰਾਈਡ ਚਿਕਨ",
+          "alt_name:pnb": "کینٹکی فرائیڈ چکن",
+          "alt_name:ur": "کینٹکی فرائیڈ چکن",
+          "amenity": "fast_food",
+          "brand": "KFC",
+          "brand:en": "KFC",
+          "brand:hi": "केएफसी",
+          "brand:pa": "ਕੇਐਫਸੀ",
+          "brand:pnb": "کے ایف سی",
+          "brand:ur": "کے ایف سی",
+          "brand:wikidata": "Q524757",
+          "brand:wikipedia": "en:KFC",
+          "brand:wikipedia:pa": "ਕੇਐਫਸੀ",
+          "brand:wikipedia:ur": "کینٹکی فرائیڈ چکن",
+          "cuisine": "chicken",
+          "name": "KFC",
+          "name:en": "KFC",
+          "name:hi": "केएफसी",
+          "name:pa": "ਕੇਐਫਸੀ",
+          "name:pnb": "کے ایف سی",
+          "name:ur": "کے ایف سی",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095426394,
+        "lat": 30.7055714,
+        "lon": 76.8011262,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Elante Mall",
+          "alt_name": "Kentucky Fried Chicken",
+          "alt_name:en": "Kentucky Fried Chicken",
+          "alt_name:hi": "केंटुकी फ्राइड चिकन",
+          "alt_name:pa": "ਕੈਂਟੁਕੀ ਫ੍ਰਾਈਡ ਚਿਕਨ",
+          "alt_name:pnb": "کینٹکی فرائیڈ چکن",
+          "alt_name:ur": "کینٹکی فرائیڈ چکن",
+          "amenity": "fast_food",
+          "brand": "KFC",
+          "brand:en": "KFC",
+          "brand:hi": "केएफसी",
+          "brand:pa": "ਕੇਐਫਸੀ",
+          "brand:pnb": "کے ایف سی",
+          "brand:ur": "کے ایف سی",
+          "brand:wikidata": "Q524757",
+          "brand:wikipedia": "en:KFC",
+          "brand:wikipedia:pa": "ਕੇਐਫਸੀ",
+          "brand:wikipedia:ur": "کینٹکی فرائیڈ چکن",
+          "cuisine": "chicken",
+          "name": "KFC",
+          "name:en": "KFC",
+          "name:hi": "केएफसी",
+          "name:pa": "ਕੇਐਫਸੀ",
+          "name:pnb": "کے ایف سی",
+          "name:ur": "کے ایف سی",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095439072,
+        "lat": 30.720014,
+        "lon": 76.75727,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 35 C",
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:ks": "ڈومینوز",
+          "brand:pa": "ਡੋਮੀਨੋਜ਼",
+          "brand:ur": "ڈومینوز",
+          "brand:wikidata": "Q839466",
+          "brand:wikipedia": "en:Domino's Pizza",
+          "cuisine": "pizza",
+          "name": "Domino's",
+          "name:ks": "ڈومینوز",
+          "name:pa": "ਡੋਮੀਨੋਜ਼",
+          "name:ur": "ڈومینوز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095439087,
+        "lat": 30.7301909,
+        "lon": 76.7735316,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 22 C",
+          "amenity": "fast_food",
+          "brand": "Subway",
+          "brand:pa": "ਸਬਵੇਅ",
+          "brand:ur": "سب وے",
+          "brand:wikidata": "Q244457",
+          "brand:wikipedia": "en:Subway (restaurant)",
+          "check_date": "2023-11-20",
+          "cuisine": "sandwich",
+          "name": "Subway",
+          "name:pa": "ਸਬਵੇਅ",
+          "name:ur": "سب وے",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095444648,
+        "lat": 30.7298333,
+        "lon": 76.7910327,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 19 C",
+          "amenity": "fast_food",
+          "brand": "Subway",
+          "brand:pa": "ਸਬਵੇਅ",
+          "brand:ur": "سب وے",
+          "brand:wikidata": "Q244457",
+          "brand:wikipedia": "en:Subway (restaurant)",
+          "cuisine": "sandwich",
+          "name": "Subway",
+          "name:pa": "ਸਬਵੇਅ",
+          "name:ur": "سب وے",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095461731,
+        "lat": 30.7007565,
+        "lon": 76.7646984,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 46",
+          "amenity": "fast_food",
+          "brand": "Subway",
+          "brand:pa": "ਸਬਵੇਅ",
+          "brand:ur": "سب وے",
+          "brand:wikidata": "Q244457",
+          "brand:wikipedia": "en:Subway (restaurant)",
+          "cuisine": "sandwich",
+          "name": "Subway",
+          "name:pa": "ਸਬਵੇਅ",
+          "name:ur": "سب وے",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095489274,
+        "lat": 30.7056801,
+        "lon": 76.8006549,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Elante Mall",
+          "amenity": "fast_food",
+          "brand": "Subway",
+          "brand:pa": "ਸਬਵੇਅ",
+          "brand:ur": "سب وے",
+          "brand:wikidata": "Q244457",
+          "brand:wikipedia": "en:Subway (restaurant)",
+          "cuisine": "sandwich",
+          "name": "Subway",
+          "name:pa": "ਸਬਵੇਅ",
+          "name:ur": "سب وے",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095651374,
+        "lat": 30.7432232,
+        "lon": 76.7441501,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Sector-38D",
+          "addr:street": "Vidya Marg",
+          "amenity": "restaurant",
+          "brand": "Pizza Hut",
+          "brand:wikidata": "Q191615",
+          "brand:wikipedia": "en:Pizza Hut",
+          "cuisine": "pizza",
+          "indoor_seating": "yes",
+          "name": "Pizza Hut",
+          "outdoor_seating": "no"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095658226,
+        "lat": 30.7054014,
+        "lon": 76.8016531,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:ks": "ڈومینوز",
+          "brand:pa": "ਡੋਮੀਨੋਜ਼",
+          "brand:ur": "ڈومینوز",
+          "brand:wikidata": "Q839466",
+          "brand:wikipedia": "en:Domino's Pizza",
+          "cuisine": "pizza",
+          "name": "Domino's",
+          "name:ks": "ڈومینوز",
+          "name:pa": "ਡੋਮੀਨੋਜ਼",
+          "name:ur": "ڈومینوز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095680042,
+        "lat": 30.7054706,
+        "lon": 76.8005749,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Elante Mall",
+          "amenity": "restaurant",
+          "brand": "Pizza Hut",
+          "brand:wikidata": "Q191615",
+          "brand:wikipedia": "en:Pizza Hut",
+          "cuisine": "pizza",
+          "name": "Pizza Hut"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095690214,
+        "lat": 30.7246218,
+        "lon": 76.76475,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "Sector-35",
+          "addr:street": "Himalaya Marg",
+          "amenity": "restaurant",
+          "brand": "Pizza Hut",
+          "brand:wikidata": "Q191615",
+          "brand:wikipedia": "en:Pizza Hut",
+          "cuisine": "pizza",
+          "name": "Pizza Hut"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095722358,
+        "lat": 30.7289312,
+        "lon": 76.8455691,
+        "tags": {
+          "addr:city": "IT Park Chandigarh",
+          "addr:street": "DLF City Centre Mall",
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:ks": "ڈومینوز",
+          "brand:pa": "ਡੋਮੀਨੋਜ਼",
+          "brand:ur": "ڈومینوز",
+          "brand:wikidata": "Q839466",
+          "brand:wikipedia": "en:Domino's Pizza",
+          "cuisine": "pizza",
+          "name": "Domino's",
+          "name:ks": "ڈومینوز",
+          "name:pa": "ਡੋਮੀਨੋਜ਼",
+          "name:ur": "ڈومینوز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095731424,
+        "lat": 30.6947031,
+        "lon": 76.7702528,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 47 C",
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:ks": "ڈومینوز",
+          "brand:pa": "ਡੋਮੀਨੋਜ਼",
+          "brand:ur": "ڈومینوز",
+          "brand:wikidata": "Q839466",
+          "brand:wikipedia": "en:Domino's Pizza",
+          "cuisine": "pizza",
+          "name": "Domino's",
+          "name:ks": "ڈومینوز",
+          "name:pa": "ਡੋਮੀਨੋਜ਼",
+          "name:ur": "ڈومینوز",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7095752863,
+        "lat": 30.7458478,
+        "lon": 76.7434986,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:street": "Sector 38",
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:ks": "ڈومینوز",
+          "brand:pa": "ਡੋਮੀਨੋਜ਼",
+          "brand:ur": "ڈومینوز",
+          "brand:wikidata": "Q839466",
+          "brand:wikipedia": "en:Domino's Pizza",
+          "cuisine": "pizza",
+          "indoor_seating": "yes",
+          "name": "Domino's",
+          "name:ks": "ڈومینوز",
+          "name:pa": "ਡੋਮੀਨੋਜ਼",
+          "name:ur": "ڈومینوز",
+          "outdoor_seating": "no",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7130950452,
+        "lat": 30.704614,
+        "lon": 76.8020645,
+        "tags": {
+          "amenity": "restaurant",
+          "cuisine": "international",
+          "diet:vegetarian": "yes",
+          "microbrewery": "yes",
+          "name": "Boathouse"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7130950453,
+        "lat": 30.7059608,
+        "lon": 76.8008199,
+        "tags": {
+          "amenity": "restaurant",
+          "cuisine": "regional",
+          "diet:vegetarian": "only",
+          "fixme": "location correct?",
+          "name": "Sagar Ranta"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7271721544,
+        "lat": 30.7402243,
+        "lon": 76.780603,
+        "tags": {
+          "addr:block": "17E",
+          "addr:district": "Chandigarh",
+          "amenity": "restaurant",
+          "brand": "Indian Coffee House",
+          "brand:wikidata": "Q3595301",
+          "check_date": "2025-06-18",
+          "cuisine": "coffee_shop;indian",
+          "image:menu": "45a6ec75-2c3a-4792-aa6d-ab5a4f471025",
+          "level": "0",
+          "name": "Indian Coffee House",
+          "opening_hours": "09:00-21:30",
+          "panoramax": "e04530d8-98dc-45e6-b71c-87c30c20fdc9",
+          "panoramax:0": "58659705-764f-4631-ba6e-b4447cbd0ede",
+          "panoramax:1": "065c11c0-a0ac-46e3-a526-df36ffd4fe79",
+          "panoramax:2": "8787dc0c-3ef6-4c1e-a134-eddf19df5203",
+          "panoramax:3": "1807428c-5aa3-4e48-892f-f447d1bcd5a7",
+          "panoramax:4": "6854ec15-4364-4775-a7f9-d3569d445a78",
+          "panoramax:5": "b7500372-2b7b-43be-b881-f74f042ff985",
+          "panoramax:6": "e44e57ec-6c2e-4a6f-92ae-a9a6f8d771df",
+          "panoramax:7": "7391ffd9-adad-4062-827d-e791d9821a58",
+          "panoramax:8": "c8f2b0fd-1ff2-4808-9d16-9f96cda3dfc0",
+          "panoramax:9": "3721eb14-d3ad-46ef-9dd2-dd5d0ae53b5d",
+          "website": "https://indiancoffeehouse.com/"
+        }
+      },
+      {
+        "type": "node",
+        "id": 7271726386,
+        "lat": 30.7435825,
+        "lon": 76.7873286,
+        "tags": {
+          "amenity": "restaurant",
+          "check_date": "2025-06-19",
+          "level": "0",
+          "name": "7ven 11ven",
+          "opening_hours": "09:00-22:30",
+          "phone": "+91 172 501 8711"
+        }
+      },
+      {
+        "type": "node",
+        "id": 8974472014,
+        "lat": 30.7554281,
+        "lon": 76.7671786,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Backhouse Restaurant",
+          "source": "gps"
+        }
+      },
+      {
+        "type": "node",
+        "id": 9079637717,
+        "lat": 30.7431827,
+        "lon": 76.7895894,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:district": "Chandigarh",
+          "addr:housenumber": "101",
+          "addr:postcode": "160009",
+          "addr:street": "Madhya Marg",
+          "alt_name": "Brother's Kulcha Hub",
+          "amenity": "fast_food",
+          "cuisine": "punjabi",
+          "name": "Brother's Amritsari Kulcha Hub",
+          "name:en": "Brother's Amritsari Kulcha Hub",
+          "panoramax": "067dba9b-1fd3-4939-9e83-cfa5a9ae62da"
+        }
+      },
+      {
+        "type": "node",
+        "id": 9662187731,
+        "lat": 30.7186543,
+        "lon": 76.7659887,
+        "tags": {
+          "amenity": "cafe",
+          "cuisine": "bakery",
+          "name": "Vinnie's Bakery"
+        }
+      },
+      {
+        "type": "node",
+        "id": 9983283503,
+        "lat": 30.7235381,
+        "lon": 76.7688377,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:housenumber": "sco no. 80-81-82  sector 34A",
+          "addr:postcode": "160022",
+          "addr:street": "Piccadily Backside Road",
+          "air_conditioning": "yes",
+          "amenity": "restaurant",
+          "cuisine": "italian;chinese;dosa",
+          "diet:vegetarian": "yes",
+          "name": "D-JAGG's choice",
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "phone": "+91 98141 71003",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 10008320118,
+        "lat": 30.7400461,
+        "lon": 76.7925204,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Backpackers"
+        }
+      },
+      {
+        "type": "node",
+        "id": 10823111730,
+        "lat": 30.7340943,
+        "lon": 76.8307092,
+        "tags": {
+          "amenity": "fast_food",
+          "check_date": "2023-04-19",
+          "contact:instagram": "the_burger_basket",
+          "cuisine": "burger;pizza",
+          "diet:vegetarian": "yes",
+          "name": "The Burger Basket"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11364089947,
+        "lat": 30.7307624,
+        "lon": 76.7730813,
+        "tags": {
+          "amenity": "fast_food",
+          "brand": "Domino's",
+          "brand:wikidata": "Q839466",
+          "cuisine": "pizza",
+          "name": "Domino's",
+          "takeaway": "yes"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11691617173,
+        "lat": 30.7183894,
+        "lon": 76.7661234,
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Chai sutta bar"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11691617174,
+        "lat": 30.7184868,
+        "lon": 76.7660349,
+        "tags": {
+          "amenity": "fast_food",
+          "name": "bombay express"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11897107938,
+        "lat": 30.7511308,
+        "lon": 76.8123752,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Woods cafe"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11897131996,
+        "lat": 30.719101,
+        "lon": 76.8015497,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Pal Dhaba (old)"
+        }
+      },
+      {
+        "type": "node",
+        "id": 11897133641,
+        "lat": 30.7258327,
+        "lon": 76.7668732,
+        "tags": {
+          "amenity": "cafe",
+          "name": "Dialogue cafe"
+        }
+      },
+      {
+        "type": "node",
+        "id": 12511928201,
+        "lat": 30.74305,
+        "lon": 76.7864234,
+        "tags": {
+          "amenity": "restaurant",
+          "check_date": "2025-06-18",
+          "cuisine": "indian",
+          "name": "Back To Source",
+          "opening_hours": "Mo 14:00-23:00; Tu-Su 09:30-23:00",
+          "panoramax": "0c4e1e9f-30fc-4dfc-ad1b-fc37e3633f74",
+          "panoramax:0": "f8667ca1-8646-4348-9fe9-0c28deca59c1",
+          "panoramax:1": "1eaa04e1-3576-482e-912e-407daecbde41",
+          "panoramax:2": "16c53104-218b-423e-9dad-f12284a01636",
+          "website": "https://backtosource.in"
+        }
+      },
+      {
+        "type": "node",
+        "id": 12597165366,
+        "lat": 30.7302106,
+        "lon": 76.7735059,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:district": "Chandigarh",
+          "addr:housenumber": "PQJF+3C7, Hotel Aroma Complex, Himalaya Marg, Sector 22C, Sector 22, Chandigarh, 160022",
+          "addr:postcode": "160022",
+          "addr:street": "Himalaya Marg",
+          "amenity": "cafe",
+          "name": "Grapewine"
+        }
+      },
+      {
+        "type": "node",
+        "id": 12597169455,
+        "lat": 30.7303115,
+        "lon": 76.7734213,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:district": "Chandigarh",
+          "addr:housenumber": "Aroma Complex, Himalaya Marg, Sector 22C, Sector 22, Chandigarh, Punjab 160022",
+          "addr:postcode": "160022",
+          "addr:street": "Himalaya Marg",
+          "amenity": "fast_food",
+          "cuisine": "juice",
+          "name": "Keventers - Aroma Hotel, Chandigarh"
+        }
+      },
+      {
+        "type": "node",
+        "id": 12597548369,
+        "lat": 30.7096343,
+        "lon": 76.773634,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:district": "Chandigarh",
+          "addr:housenumber": "Booth No. 319, Sector 32D, Sector 32, Chandigarh, 160047",
+          "addr:postcode": "160047",
+          "addr:street": "Sukhna Path",
+          "amenity": "restaurant",
+          "name": "Chick blast"
+        }
+      },
+      {
+        "type": "node",
+        "id": 12632106041,
+        "lat": 30.7325473,
+        "lon": 76.7994039,
+        "tags": {
+          "addr:city": "Chandigarh",
+          "addr:district": "Chandigarh",
+          "addr:housenumber": "SCO 16, sector 7C",
+          "addr:postcode": "160019",
+          "addr:street": "Madhya Marg",
+          "air_conditioning": "yes",
+          "amenity": "cafe",
+          "branch": "Beige cafe and bar panchkula",
+          "email": "admin@beigecafe.com",
+          "internet_access": "yes",
+          "internet_access:fee": "no",
+          "name": "Beige cafe & bakery",
+          "official_name": "Gourmet house India Pvt ltd",
+          "opening_hours": "Mo-Su 08:00-23:00",
+          "phone": "9875999500",
+          "reservation": "yes",
+          "toilets": "yes",
+          "website": "https://www.beigecafe.com/",
+          "website:menu": "https://beigecafe.com/menu"
+        }
+      },
+      {
+        "type": "node",
+        "id": 12923841257,
+        "lat": 30.7434157,
+        "lon": 76.78704,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Qisa"
+        }
+      },
+      {
+        "type": "node",
+        "id": 12923870879,
+        "lat": 30.7625091,
+        "lon": 76.7696504,
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Acme India"
+        }
+      },
+      {
+        "type": "node",
+        "id": 12923870891,
+        "lat": 30.7623651,
+        "lon": 76.7697541,
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Guru"
+        }
+      },
+      {
+        "type": "node",
+        "id": 12923878189,
+        "lat": 30.7434157,
+        "lon": 76.78704,
+        "tags": {
+          "amenity": "restaurant",
+          "name": "Qisa"
+        }
+      },
+      {
+        "type": "node",
+        "id": 12923887609,
+        "lat": 30.762423,
+        "lon": 76.7697158,
+        "tags": {
+          "amenity": "fast_food",
+          "name": "Fresh Bite"
+        }
+      }
+    ]
+  }
+}
