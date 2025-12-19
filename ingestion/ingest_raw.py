@@ -26,7 +26,7 @@ API_URL = (
     "out tags center;"
 )
 
-RAW_DIR = Path(r"C:\Users\monst\Desktop\Food_Delivery_01\data\raw")
+RAW_DIR = Path(__file__).parent.parent /"data" / "raw"
 
 # Fetched Data
 response = requests.get(API_URL, timeout=30)
