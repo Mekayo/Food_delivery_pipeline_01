@@ -26,7 +26,7 @@ API_URL = (
     "out tags center;"
 )
 
-RAW_DIR = Path(__file__).parent.parent /"data" / "raw"
+RAW_DIR = Path(__file__).parent.parent / "data" / "raw"
 
 # Fetched Data
 response = requests.get(API_URL, timeout=30)

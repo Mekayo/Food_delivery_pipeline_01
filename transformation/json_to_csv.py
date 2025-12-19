@@ -2,7 +2,7 @@ import pandas as pd
 import json
 from pathlib import Path
 
-RAW_DIR = Path(r"C:\Users\monst\Desktop\Food_Delivery_01\data\raw")
+RAW_DIR = Path(__file__).parent.parent / "data" / "raw"
 
 # get all json files
 raw_files = list(RAW_DIR.glob("*.json"))
@@ -35,7 +35,7 @@ for orders in raw_data["data"]["elements"]:
     )
 
 orders_df = pd.DataFrame(data_rows)
-output_file = Path(r"C:\Users\monst\Desktop\Food_Delivery_01\data\processed\orders_" + str(pd.Timestamp.now().strftime("%Y%m%d_%H%M%S")) + ".csv")
+output_file = Path(__file__).parent.parent / "data" / "processed" / f"orders_{pd.Timestamp.now().strftime('%Y%m%d_%H%M%S')}.csv"
 output_file.parent.mkdir(parents=True, exist_ok=True)
 orders_df.to_csv(output_file, index=False)
 print(f"[SUCCESS] processed orders saved to {output_file}")
