@@ -6,8 +6,11 @@ from transformation.feature_engineering import transform_data
 def main():
     print("Step 1:Fetching data from Overpass API")
     print("-"*50)
-
-    fetch_data()
+    try:
+        fetch_data()
+    except Exception as e:
+        print("[ERROR] Ingestion failed:",e)
+        return 
     print("-"*50)    
     
     print("Step 2: Converting JSON to processed CSV data file")
