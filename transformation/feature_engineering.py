@@ -66,7 +66,7 @@ def feature_engineering(df):
     df["customer_lat"] = CITY_CENTER_LAT
     df["customer_lon"] = CITY_CENTER_LON
 
-    df["distance"] = haversine(df["lat"], df["lon"], df["customer_lat"], df["customer_lon"])
+    df["distance_km"] = haversine(df["lat"], df["lon"], df["customer_lat"], df["customer_lon"])
 
     return df
 
