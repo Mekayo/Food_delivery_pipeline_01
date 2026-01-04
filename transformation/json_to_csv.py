@@ -1,4 +1,25 @@
-import pandas as pd
+# Windows compatibility fix - must be imported before PySpark
+import os
+import sys
+from pathlib import Path
+
+os.environ["PYSPARK_PYTHON"] = sys.executable
+os.environ["PYSPARK_DRIVER_PYTHON"] = sys.executable
+
+# Set HADOOP_HOME if not already set (Windows compatibility)
+if "HADOOP_HOME" not in os.environ:
+    project_root = Path(__file__).parent.parent
+    hadoop_dir = project_root / "hadoop"
+    if hadoop_dir.exists():
+        os.environ["HADOOP_HOME"] = str(hadoop_dir)
+
+# Disable Hadoop native IO for Windows compatibility
+os.environ["HADOOP_OPTS"] = "-Djava.library.path="
+os.environ["HADOOP_COMMON_LIB_NATIVE_DIR"] = ""
+
+from pyspark.sql import SparkSession
+from pyspark.sql.types import StructType, StructField, StringType, DoubleType, LongType
+import datetime
 import json
 from pathlib import Path
 
@@ -18,7 +39,7 @@ def get_latest_raw_file():
     return raw_file
 
 
-def parse_json_to_dataframe(raw_file):
+def parse_json_to_dataframe(spark, raw_file):
     """
     Parse JSON file and convert to DataFrame.
     Extracts order information from Overpass API response format.
@@ -30,19 +51,32 @@ def parse_json_to_dataframe(raw_file):
     
     for orders in raw_data["data"]["elements"]:
         data_rows.append(
-            {
-                "order_id": orders["id"],
-                "name": orders["tags"].get("name"),
-                "amenity": orders["tags"].get("amenity"),
-                "cuisine": orders["tags"].get("cuisine"),
-                "place": orders["tags"].get("addr:city"),
-                "order_type": orders["type"],
-                "lat": orders["lat"],
-                "lon": orders["lon"],
-            }
+            (
+                orders["id"],
+                orders["tags"].get("name"),
+                orders["tags"].get("amenity"),
+                orders["tags"].get("cuisine"),
+                orders["tags"].get("addr:city"),
+                orders["type"],
+                orders.get("lat"),
+                orders.get("lon"),
+            )
         )
     
-    return pd.DataFrame(data_rows)
+    # Define schema
+    schema = StructType([
+        StructField("order_id", LongType(), True),
+        StructField("name", StringType(), True),
+        StructField("amenity", StringType(), True),
+        StructField("cuisine", StringType(), True),
+        StructField("place", StringType(), True),
+        StructField("order_type", StringType(), True),
+        StructField("lat", DoubleType(), True),
+        StructField("lon", DoubleType(), True),
+    ])
+    
+    return spark.createDataFrame(data_rows, schema=schema) 
+    
 
 
 def json_to_csv():
@@ -52,20 +86,37 @@ def json_to_csv():
     2. Parses JSON to DataFrame
     3. Saves DataFrame as CSV to processed directory
     """
-    # Get latest raw file
-    raw_file = get_latest_raw_file()
+    spark = SparkSession.builder \
+        .appName("FoodDeliveryPipeline") \
+        .master("local[*]") \
+        .config("spark.sql.warehouse.dir", "spark-warehouse") \
+        .config("spark.driver.memory", "2g") \
+        .config("spark.hadoop.io.native.lib.available", "false") \
+        .config("spark.hadoop.mapreduce.fileoutputcommitter.algorithm.version", "1") \
+        .getOrCreate()
     
-    # Parse JSON to DataFrame
-    orders_df = parse_json_to_dataframe(raw_file)
-    
-    # Save to processed directory
-    output_file = PROCESSED_DIR / f"orders_{pd.Timestamp.now().strftime('%Y%m%d_%H%M%S')}.csv"
-    output_file.parent.mkdir(parents=True, exist_ok=True)
-    orders_df.to_csv(output_file, index=False)
-    print(f"[SUCCESS] Processed orders saved to {output_file}")
-    
-    return orders_df
+    # Disable native IO in Hadoop config
+    spark.sparkContext._jsc.hadoopConfiguration().set("io.native.lib.available", "false")
+    try:
+        # Get latest raw file
+        raw_file = get_latest_raw_file()
 
+        # Parse JSON to DataFrame
+        orders_df = parse_json_to_dataframe(spark,raw_file)
+
+        # Save to processed directory (Windows workaround: use Pandas to avoid Hadoop native lib issues)
+        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        output_dir = PROCESSED_DIR / f"orders_{timestamp}"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        output_file = output_dir / "part-00000.csv"
+        
+        # Convert to Pandas and write CSV (avoids Hadoop native library issues on Windows)
+        orders_df.toPandas().to_csv(output_file, index=False, header=True)
+        print(f"[SUCCESS] Processed orders saved to {output_file}")
+
+        return orders_df
+    finally :
+        spark.stop()
 
 if __name__ == "__main__":
     json_to_csv()

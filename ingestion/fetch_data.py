@@ -1,6 +1,7 @@
 import requests
 import datetime as dt
 import json
+import time
 from pathlib import Path
 
 # query for overpass to get api for project api getting from link is large string that why calling query like this
@@ -8,23 +9,43 @@ from pathlib import Path
 API_URL = (
     "https://overpass-api.de/api/interpreter?data="
     "[out:json][timeout:25];"
-    "area[\"name\"=\"Chandigarh\"][\"boundary\"=\"administrative\"]->.searchArea;"
+    "area[\"name\"=\"Chandigarh\"][admin_level=6]->.searchArea;"
     "("
     "node[\"amenity\"=\"restaurant\"](area.searchArea);"
     "node[\"amenity\"=\"fast_food\"](area.searchArea);"
     "node[\"amenity\"=\"cafe\"](area.searchArea);"
     ");"
-    "out tags center;"
+    "out body;"
 )
+
 
 RAW_DIR = Path(__file__).parent.parent / "data" / "raw"
 
 
 def fetch_data():
-    # Fetched Data
-    response = requests.get(API_URL, timeout=30)
-    response.raise_for_status()
-    api_data = response.json()
+    """
+    Fetch data from Overpass API with basic retry logic.
+    This helps handle transient 5xx / timeout errors from the public API.
+    """
+    max_retries = 3
+    backoff_seconds = 5
+
+    # Fetched Data with retries
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = requests.get(API_URL, timeout=60)
+            response.raise_for_status()
+            api_data = response.json()
+            break
+        except requests.RequestException as e:
+            if attempt == max_retries:
+                # Re-raise after final attempt so the pipeline can fail loudly
+                raise
+            print(
+                f"[WARN] Overpass API request failed (attempt {attempt}/{max_retries}): {e}. "
+                f"Retrying in {backoff_seconds} seconds..."
+            )
+            time.sleep(backoff_seconds)
 
     # metadata
     raw_payload = {
