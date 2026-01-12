@@ -1,0 +1,9 @@
+pyspark>=3.5.0
+pandas>=2.0.0
+requests>=2.28.0
+numpy>=1.24.0
+
+# Apache Airflow Providers (apache-airflow is provided by the base image)
+apache-airflow-providers-http>=4.5.0
+apache-airflow-providers-postgres>=5.7.0
+
