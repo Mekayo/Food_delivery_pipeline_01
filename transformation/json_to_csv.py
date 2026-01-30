@@ -16,6 +16,19 @@ if "HADOOP_HOME" not in os.environ:
 # Disable Hadoop native IO for Windows compatibility
 os.environ["HADOOP_OPTS"] = "-Djava.library.path="
 os.environ["HADOOP_COMMON_LIB_NATIVE_DIR"] = ""
+# ---------java home for wind---------------- 
+if "JAVA_HOME" not in os.environ:
+    # Try common Java installation paths
+    java_paths = [
+        "/usr/lib/jvm/java-17-openjdk-amd64",
+        "/usr/lib/jvm/java-11-openjdk-amd64",
+        "/usr/lib/jvm/default-java"
+    ]
+    for path in java_paths:
+        if os.path.exists(path):
+            os.environ["JAVA_HOME"] = path
+            break
+# --------------------------------------------
 
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, StringType, DoubleType, LongType
@@ -28,7 +41,7 @@ PROCESSED_DIR = Path(__file__).parent.parent / "data" / "processed"
 
 
 def get_latest_raw_file():
-    """Get the latest raw JSON file from the raw directory."""
+    
     raw_files = list(RAW_DIR.glob("*.json"))
     
     if not raw_files:
@@ -40,10 +53,7 @@ def get_latest_raw_file():
 
 
 def parse_json_to_dataframe(spark, raw_file):
-    """
-    Parse JSON file and convert to DataFrame.
-    Extracts order information from Overpass API response format.
-    """
+    
     with open(raw_file, "r", encoding="utf-8") as f:
         raw_data = json.load(f)
     
@@ -80,12 +90,7 @@ def parse_json_to_dataframe(spark, raw_file):
 
 
 def json_to_csv():
-    """
-    Main function that:
-    1. Gets the latest raw JSON file
-    2. Parses JSON to DataFrame
-    3. Saves DataFrame as CSV to processed directory
-    """
+    
     spark = SparkSession.builder \
         .appName("FoodDeliveryPipeline") \
         .master("local[*]") \
