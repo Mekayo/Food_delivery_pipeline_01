@@ -12,3 +12,5 @@ airflow.db
 .idea
 data
 notebook
+test
+plugins
