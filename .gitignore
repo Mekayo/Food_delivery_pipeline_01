@@ -4,7 +4,7 @@
 airflow_settings.yaml
 __pycache__/
 .astro
-.venv
+.venv3.14
 airflow-webserver.pid
 webserver_config.py
 airflow.cfg
@@ -14,3 +14,7 @@ data
 notebook
 test
 plugins
+
+# IDE files
+.vscode/
+ 
