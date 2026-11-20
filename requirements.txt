@@ -1,9 +1,14 @@
-pyspark>=3.5.0
+# Data Processing & Numerical
 pandas>=2.0.0
-requests>=2.28.0
 numpy>=1.24.0
 
-# Apache Airflow Providers (apache-airflow is provided by the base image)
-apache-airflow-providers-http>=4.5.0
-apache-airflow-providers-postgres>=5.7.0
+# HTTP requests
+requests>=2.28.0
 
+# Database Connectivity
+# Note: SQLAlchemy is already pre-installed by the Astro Airflow runtime image (v1.4.x).
+# We only need the postgres driver:
+psycopg2-binary>=2.9.0
+
+# Airflow Providers
+apache-airflow-providers-postgres>=5.7.0

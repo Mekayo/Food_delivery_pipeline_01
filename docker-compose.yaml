@@ -1,17 +1,20 @@
-version: '3'
 services:
+  postgres:
+    image: postgres:16
+    container_name: food_delivery_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: food_delivery
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-    postgres:
-      image: postgres:13
-      container_name: food_delivery_postgres
-      environment:
-        POSTGRES_USER: postgres
-        POSTGRES_PASSWORD: postgres
-        POSTGRES_DB: postgres
-      ports:
-        - "5433:5432"
-      volumes :
-        - postgres_data:/var/lib/postgresq1/data
-
-volumes :
+volumes:
   postgres_data:

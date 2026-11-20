@@ -5,54 +5,58 @@ import time
 from pathlib import Path
 
 # query for overpass to get api for project api getting from link is large string that why calling query like this
-
-API_URL = (
-    "https://overpass-api.de/api/interpreter?data="
-    "[out:json][timeout:25];"
-    "area[\"name\"=\"Chandigarh\"][admin_level=6]->.searchArea;"
+ENDPOINTS = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+]
+QUERY = (
+    "[out:json][timeout:180];"
+    "area[\"name\"=\"Chandigarh\"][\"boundary\"=\"administrative\"]->.a;"
+    "area[\"name\"=\"Delhi\"][\"boundary\"=\"administrative\"]->.b;"
+    "area[\"name\"=\"Mumbai\"][\"boundary\"=\"administrative\"]->.c;"
+    "area[\"name\"=\"Bengaluru\"][\"boundary\"=\"administrative\"]->.d;"
+    "(.a;.b;.c;.d;)->.searchArea;"
     "("
     "node[\"amenity\"=\"restaurant\"](area.searchArea);"
     "node[\"amenity\"=\"fast_food\"](area.searchArea);"
     "node[\"amenity\"=\"cafe\"](area.searchArea);"
-    ");"
-    "out body;"
+    ");out body;"
 )
 
+HEADERS = {"User-Agent": "food-delivery-pipeline/1.0 (29004hitesh@gmail.com)"}
 
 RAW_DIR = Path(__file__).parent.parent / "data" / "raw"
 
 
 def fetch_data():
-    """
-    Fetch data from Overpass API with basic retry logic.
-    This helps handle transient 5xx / timeout errors from the public API.
-    """
+     
     max_retries = 3
     backoff_seconds = 5
 
     # Fetched Data with retries
     for attempt in range(1, max_retries + 1):
-        try:
-            response = requests.get(API_URL, timeout=60)
-            response.raise_for_status()
-            api_data = response.json()
-            break
-        except requests.RequestException as e:
+        for url in ENDPOINTS:
+            try:
+                response = requests.post(url, data={"data": QUERY},
+                                     headers=HEADERS, timeout=(10, 200))
+                response.raise_for_status()
+                api_data = response.json()
+                break
+            except requests.RequestException as e:
+                print(f"[WARN] {url} failed: {e}")
+        else:
             if attempt == max_retries:
-                # Re-raise after final attempt so the pipeline can fail loudly
-                raise
-            print(
-                f"[WARN] Overpass API request failed (attempt {attempt}/{max_retries}): {e}. "
-                f"Retrying in {backoff_seconds} seconds..."
-            )
+                raise RuntimeError("All Overpass endpoints failed")
             time.sleep(backoff_seconds)
+            continue
+        break   
 
     # metadata
     raw_payload = {
         "metadata": {
             "source": "overpass_turbo",
-            "endpoint": API_URL,
-            "ingestion_timestamp": dt.datetime.utcnow().isoformat()
+            "endpoint": QUERY,
+            "ingestion_timestamp": dt.datetime.now(dt.timezone.utc).isoformat()
         },
         "data": api_data
     }
@@ -60,7 +64,7 @@ def fetch_data():
     #  saving data to files
     RAW_DIR.mkdir(parents=True, exist_ok=True)
 
-    filename = f"orders_{dt.datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json"
+    filename = f"orders_{dt.datetime.now(dt.timezone.utc).strftime('%Y%m%d_%H%M%S')}.json"
     file_path = RAW_DIR / filename
 
     with open(file_path, "w", encoding="utf-8") as f:
@@ -68,3 +72,7 @@ def fetch_data():
 
     print(f"[SUCCESS] Raw data saved to: {file_path}")
     return raw_payload
+
+
+if __name__ == "__main__":
+    fetch_data()
