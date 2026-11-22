@@ -3,12 +3,13 @@ from transformation.json_to_csv import json_to_csv
 from transformation.feature_engineering import transform_data
 from storage.postgres_loader import load_curated_to_postgres
 
+# main pipeline loading all scripts in order.
 
 def main():
     print("=" * 60)
     print("🚀 FOOD DELIVERY ETL PIPELINE")
     print("=" * 60)
-
+# 1.
     print("\n[Step 1/4] Fetching data from Overpass API...")
     try:
         fetch_data()
@@ -16,7 +17,7 @@ def main():
     except Exception as e:
         print(f"[WARN] Ingestion network issue: {e}")
         print("[INFO] Continuing with   =- existing local raw data...")
-
+# 2.
     print("\n[Step 2/4] Parsing raw JSON into structured tabular format (Pandas)...")
     try:
         json_to_csv()
@@ -24,7 +25,7 @@ def main():
     except Exception as e:
         print(f"[FATAL] Transformation failed: {e}")
         return
-
+# 3.
     print("\n[Step 3/4] Data Cleaning & Spatial Feature Engineering...")
     try:
         transform_data()
@@ -32,7 +33,7 @@ def main():
     except Exception as e:
         print(f"[FATAL] Feature engineering failed: {e}")
         return
-
+# 4.
     print("\n[Step 4/4] Loading curated data into PostgreSQL warehouse...")
     try:
         load_curated_to_postgres()
