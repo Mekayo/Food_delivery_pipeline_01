@@ -6,7 +6,7 @@ from transformation.feature_engineering import CURATED_DIR
 # DB Config: default matches docker-compose.yaml
 DB_USER = os.getenv("POSTGRES_USER", "postgres")
 DB_PASSWORD = os.getenv("POSTGRES_PASSWORD", "postgres")
-DB_HOST = os.getenv("POSTGRES_HOST", "localhost")
+DB_HOST = os.getenv("POSTGRES_HOST", "host.docker.internal")
 DB_PORT = os.getenv("POSTGRES_PORT", "5433")  # mapped port from docker-compose
 DB_NAME = os.getenv("POSTGRES_DB", "food_delivery")
 

@@ -17,4 +17,4 @@ plugins
 
 # IDE files
 .vscode/
- 
+venv/
