@@ -7,8 +7,12 @@ PROCESSED_DIR = Path(__file__).parent.parent / "data" / "processed"
 CURATED_DIR = Path(__file__).parent.parent / "data" / "curated"
 
 # Chandigarh city center coordinates
-CITY_CENTER_LAT = 30.7333
-CITY_CENTER_LON = 76.7794
+CITY_CENTERS = {
+    "Chandigarh": {"lat": 30.7333, "lon": 76.7794, "core_km": 5.0,  "suburban_km": 12.0},
+    "Delhi":      {"lat": 28.6139, "lon": 77.2090, "core_km": 10.0, "suburban_km": 25.0},
+    "Mumbai":     {"lat": 19.0760, "lon": 72.8777, "core_km": 8.0,  "suburban_km": 20.0},
+    "Bengaluru":  {"lat": 12.9716, "lon": 77.5946, "core_km": 8.0,  "suburban_km": 18.0},
+}
 EARTH_RADIUS_KM = 6371.0
 
 
@@ -53,9 +57,8 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     return cleaned
 
 
-def calculate_haversine_distance(
-    lat1: pd.Series, lon1: pd.Series, lat2: float, lon2: float
-) -> pd.Series:
+def calculate_haversine_distance( lat1: pd.Series, lon1: pd.Series, lat2: float, lon2: float) -> pd.Series:
+    
     """Vectorized Haversine distance calculation in kilometers using NumPy."""
     lat1_rad, lon1_rad = np.radians(lat1), np.radians(lon1)
     lat2_rad, lon2_rad = np.radians(lat2), np.radians(lon2)
@@ -69,20 +72,32 @@ def calculate_haversine_distance(
 
 
 def add_features(df: pd.DataFrame) -> pd.DataFrame:
-    """Enrich data with distance to city center and operational flags."""
+    """Assign each restaurant to its nearest city and compute zone from that city's thresholds."""
     featured = df.copy()
-    featured["distance_to_center_km"] = calculate_haversine_distance(
-        featured["lat"], featured["lon"], CITY_CENTER_LAT, CITY_CENTER_LON
-    )
 
-    # Deliverability zone logic based on distance
-    featured["delivery_zone"] = np.where(
-        featured["distance_to_center_km"] <= 5.0,
-        "Core Zone (<5km)",
-        np.where(featured["distance_to_center_km"] <= 12.0, "Suburban Zone (5-12km)", "Outskirts (>12km)"),
+    # One column of distances per city: shape (n_rows, 4)
+    distances = pd.DataFrame({
+        city: calculate_haversine_distance(featured["lat"], featured["lon"], c["lat"], c["lon"])
+        for city, c in CITY_CENTERS.items()
+    })
+
+    featured["city"] = distances.idxmin(axis=1)           # name of the closest center
+    featured["distance_to_center_km"] = distances.min(axis=1)
+
+    # Per-row thresholds, looked up by that row's city
+    core_limit = featured["city"].map({k: v["core_km"] for k, v in CITY_CENTERS.items()})
+    suburban_limit = featured["city"].map({k: v["suburban_km"] for k, v in CITY_CENTERS.items()})
+
+    d = featured["distance_to_center_km"]
+    featured["delivery_zone"] = np.select(
+        [d <= core_limit, d <= suburban_limit],
+        ["Core Zone", "Suburban Zone"],
+        default="Outskirts",
     )
     return featured
 
+# ===================================================
+# main cleaning pipline
 
 def transform_data():
     """Execute cleaning and feature engineering workflow."""
